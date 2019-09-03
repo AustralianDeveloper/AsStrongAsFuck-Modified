@@ -14,7 +14,7 @@ namespace AsStrongAsFuck
             foreach (var type in md.Types)
             {
                 foreach (var method in type.Methods.Where(x => !x.IsConstructor && !x.IsVirtual))
-                    Renamer.Rename(method, Renamer.RenameMode.Logical, 3);
+                Renamer.Rename(method, Renamer.RenameMode.Invalid, 69);
             }
         }
     }

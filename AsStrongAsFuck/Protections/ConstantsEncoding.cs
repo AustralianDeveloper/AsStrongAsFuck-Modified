@@ -82,7 +82,8 @@ namespace AsStrongAsFuck
                 keys.Reverse();
                 foreach (Tuple<int, int, int> v in keys)
                 {
-                    method.Body.Instructions[v.Item1].Operand = "AsStrongAsFuck - Obfuscator by Charter (vk.com/violent_0)";
+                    // Experimental renamer
+                    method.Body.Instructions[v.Item1].Operand = Renamer.GetRandomName();
                     method.Body.Instructions.Insert(v.Item1 + 1, new Instruction(OpCodes.Ldc_I4, v.Item2));
                     method.Body.Instructions.Insert(v.Item1 + 2, new Instruction(OpCodes.Ldc_I4, v.Item3));
                     method.Body.Instructions.Insert(v.Item1 + 3, new Instruction(OpCodes.Call, Decryptor));

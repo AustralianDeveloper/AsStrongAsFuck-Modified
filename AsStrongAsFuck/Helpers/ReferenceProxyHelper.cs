@@ -12,7 +12,7 @@ namespace AsStrongAsFuck.Helpers
     {
         public static TypeDef CreateDelegateType(MethodSig sig, ModuleDef target, MethodDef original)
         {
-            TypeDef ret = new TypeDefUser("AsStrongAsFuck", Renamer.GetEndName(RenameMode.Base64, 3, 20), target.CorLibTypes.GetTypeRef("System", "MulticastDelegate"));
+            TypeDef ret = new TypeDefUser("moneydev", Renamer.GetEndName(RenameMode.Base64, 3, 20), target.CorLibTypes.GetTypeRef("System", "MulticastDelegate"));
             ret.Attributes = original.DeclaringType.Attributes;
 
             var ctor = new MethodDefUser(".ctor", MethodSig.CreateInstance(target.CorLibTypes.Void, target.CorLibTypes.Object, target.CorLibTypes.IntPtr));

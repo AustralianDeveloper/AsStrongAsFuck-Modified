@@ -60,7 +60,7 @@ namespace AsStrongAsFuck
 
                         var deleg = ReferenceProxyHelper.CreateDelegateType(proxysig, method.Module, target.ResolveMethodDef());
 
-                        FieldDefUser field = new FieldDefUser("Shit", new FieldSig(deleg.ToTypeSig()));
+                        FieldDefUser field = new FieldDefUser("ZYXDNGuarder", new FieldSig(deleg.ToTypeSig()));
 
                         Renamer.Rename(field, Renamer.RenameMode.Base64);
                         method.DeclaringType.Fields.Add(field);
